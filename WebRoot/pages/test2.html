@@ -1,0 +1,104 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+	<meta name="Author" content="fancimage">
+	<meta name="Description" content="ternlight library">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="js/base.js" charset="gb2312"></script>
+	<script type="text/javascript" src="js/graph.js" charset="gb2312"></script>
+	<script type="text/javascript" src="js/connector.js" charset="gb2312"></script>
+	<script type="text/javascript" src="js/action.js" charset="gb2312"></script>
+	<script type="text/javascript" src="js/jquery.js" charset="gb2312"></script>
+<style>
+     .toolitem{
+         width:80px;
+         height:20px;
+         border: 1px solid #68A521;
+         background:#EDEDED;
+         font-size: 9pt;
+         text-align:center;
+         padding-top: 4px;
+         
+         box-shadow: 2px 2px 19px #aaa;
+         -o-box-shadow: 2px 2px 19px #aaa;
+         -webkit-box-shadow: 2px 2px 19px #aaa;
+   		 -moz-box-shadow: 2px 2px 19px #aaa;
+   		 -moz-border-radius: 0.5em;
+   		 border-radius: 0.5em;
+   		 opacity: 0.8;
+   		 cursor: pointer;
+   		 text-align: center;
+   		 z-index: 20;
+   		 background-color: #eeeeef;
+   		 color: black;
+     }     
+</style>
+
+<script language="javascript">
+   function onload(){
+       var diagram = new tern.Diagram('mycanvas');
+       var rectShape = new tern.RectangleShape();
+       rectShape.x = 20;
+       rectShape.y = 20;
+       rectShape.width = 100;
+       rectShape.height = 100;       
+       diagram.addChild(rectShape);
+       
+       rectShape = new tern.RectangleShape();
+       rectShape.x = 220;
+       rectShape.y = 120;
+       rectShape.width = 100;
+       rectShape.height = 100;
+       diagram.addChild(rectShape);
+       
+       //init toolboxes
+       diagram.toolbox('shape1','drager1',tern.RectangleShape);
+       diagram.toolbox('shape2','drager2',tern.RectangleShape);
+       diagram.toolbox('shape3','drager3',tern.RectangleShape);
+       diagram.toolbox('shape4','drager4',tern.RectangleShape);
+       diagram.toolbox('shape5','drager5',tern.RectangleShape);
+       diagram.toolbox('shape6','drager6',tern.RectangleShape);
+   }
+</script>
+</head>
+<body onLoad="onload();">
+
+<table border=0 cellspacing=1 >
+<tr>
+<td>
+<div id="shape1" class="toolitem" style="float:left">01</div>
+<div id="drager1" style="width:80px;height:24px;border:#F2F2F2;"></div>
+</td>
+<td>
+<div id="shape2" class="toolitem" style="float:left">02</div>
+<div id="drager2" style="width:80px;height:24px;border:#F2F2F2;"></div>
+</td>
+<td>
+<div id="shape3" class="toolitem" style="float:left">03</div>
+<div id="drager3" style="width:80px;height:24px;border:#F2F2F2;"></div>
+</td>
+<td>
+<div id="shape4" class="toolitem" style="float:left">04</div>
+<div id="drager4" style="width:80px;height:24px;border:#F2F2F2;"></div>
+</td>
+<td>
+<div id="shape5" class="toolitem" style="float:left">05</div>
+<div id="drager5" style="width:80px;height:24px;border:#F2F2F2;"></div>
+</td>
+<td>
+<div id="shape6" class="toolitem" style="float:left">06</div>
+<div id="drager6" style="width:80px;height:24px;border:#F2F2F2;"></div>
+</td>
+</tr>
+</table>
+
+
+<div>
+<canvas id="mycanvas" width="700" height="500"/>
+</div>
+
+
+</body>
+</html>
